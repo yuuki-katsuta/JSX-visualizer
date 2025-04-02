@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@babel/core": "^7.26.10",
+    "ast-pretty-print": "^2.0.1",
+    "babel-log": "^2.0.0",
+    "babylon": "^6.18.0"
+  }
+}
