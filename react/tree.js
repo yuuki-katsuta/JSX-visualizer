@@ -1,4 +1,4 @@
-const babelParser = require("@babel/parser");
+import { parse } from "@babel/parser";
 
 // AST 中の各ノード（特に JSX 要素）を走査し、簡略化したオブジェクトに変換してツリー構造として組み立てる
 const reduceAstNode = (oldNode, currentNode) => {
@@ -24,8 +24,8 @@ const reduceAstNode = (oldNode, currentNode) => {
   return oldNode;
 };
 
-const getTree = () => {
-  const rawAst = babelParser.parse(content, {
+export const getTree = () => {
+  const rawAst = parse(content, {
     sourceType: "module",
     plugins: ["jsx"],
   });
@@ -45,9 +45,12 @@ const content = `
       <div>
         <h1>Hello World</h1>
         <p>This is a sample JSX component.</p>
+        <div>
+          <p>react</p>
+          <p>react</p>
+          <p>react</p>
+        </div>
       </div>
     );
   };
 `;
-
-console.log(JSON.stringify(getTree(), null, 2));
