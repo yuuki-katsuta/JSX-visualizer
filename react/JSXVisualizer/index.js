@@ -1,8 +1,8 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
-import { render } from "./visualizer";
-import { getTree } from "../tree";
-import { Visualizer } from "./visualizer";
+const { createRoot } = require("react-dom/client");
+const { render } = require("./visualizer");
+const { getTree } = require("../tree");
+const { Visualizer } = require("./visualizer");
 
 const MyComponent = () => {
   return (
@@ -20,10 +20,11 @@ createRoot(document.getElementById("app")).render(
 
     <h2>ビジュアライザーでラップしたコンポーネント</h2>
     <Visualizer>
-      <MyComponent />
+      <div>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+      </div>
     </Visualizer>
-
-    {/* <h2>手動で追加したtreeData</h2>
-    <Visualizer treeData='[{"name":"div","children":[{"name":"p","children":[]}]}]' /> */}
   </div>
 );

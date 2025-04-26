@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from "react";
+const React = require("react");
+const { useEffect, useRef } = require("react");
 
-export function Visualizer({ treeData, children }) {
+function Visualizer({ treeData, children }) {
   const ref = useRef();
 
   console.log(treeData);
@@ -18,7 +19,7 @@ export function Visualizer({ treeData, children }) {
   );
 }
 
-export const render = (json_data) => {
+const render = (json_data) => {
   const m = [20, 120, 20, 60];
   const w = 1000 - m[1] - m[3];
   const h = 400 - m[0] - m[2];
@@ -158,4 +159,9 @@ export const render = (json_data) => {
     .attr("transform", `translate(${m[3]}, ${m[0]})`);
 
   update(root, _vis);
+};
+
+module.exports = {
+  Visualizer,
+  render,
 };
