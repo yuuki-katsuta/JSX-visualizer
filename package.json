@@ -10,7 +10,9 @@
     "ast-pretty-print": "^2.0.1",
     "babel-log": "^2.0.0",
     "babylon": "^6.18.0",
-    "d3": "^3.5.17"
+    "d3": "^3.5.17",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "http-server": "^14.1.1",

@@ -1,7 +1,7 @@
 import { parse } from "@babel/parser";
 
 // AST 中の各ノード（特に JSX 要素）を走査し、簡略化したオブジェクトに変換してツリー構造として組み立てる
-const reduceAstNode = (oldNode, currentNode) => {
+export const reduceAstNode = (oldNode, currentNode) => {
   let element = {};
   // currentNode が JSXElement の場合、その要素のタグ名（currentNode.openingElement.name.name）をキー name として取得し、
   // 空の children 配列とともにオブジェクトを作成
