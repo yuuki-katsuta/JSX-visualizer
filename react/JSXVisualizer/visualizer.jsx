@@ -8,7 +8,7 @@ function Visualizer({ treeData, children }) {
 
   useEffect(() => {
     // 既存の render(json) を流用
-    // renderTree(treeData);
+    render(treeData);
   }, [treeData]);
 
   return (
@@ -151,7 +151,7 @@ const render = (json_data) => {
   };
 
   const _vis = d3
-    .select("#tree-wrapper")
+    .select("#tree-visualizer")
     .append("svg:svg")
     .attr("width", w + m[1] + m[3])
     .attr("height", h + m[0] + m[2])

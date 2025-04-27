@@ -23,7 +23,30 @@ createRoot(document.getElementById("app")).render(
       <div>
         <p>hello</p>
         <p>hello</p>
-        <p>hello</p>
+        <p>
+          hello
+          <img></img>
+          <span>span</span>
+          <span>span</span>
+          <span>
+            <label></label>
+            <label></label>
+            <label></label>
+            span
+          </span>
+        </p>
+        <div>
+          <div>
+            <p>hello</p>
+            <p>hello</p>
+            <p>hello</p>
+          </div>
+          <div>
+            <p>hello</p>
+            <p>hello</p>
+            <p>hello</p>
+          </div>
+        </div>
       </div>
     </Visualizer>
   </div>
