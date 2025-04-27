@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {
-    "start": "parcel index.html --open"
+    "start": "rm -rf dist .cache && parcel index.html --open"
   },
   "dependencies": {
     "@babel/core": "^7.26.10",
