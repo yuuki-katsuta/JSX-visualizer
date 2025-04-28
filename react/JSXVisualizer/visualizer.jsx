@@ -12,7 +12,7 @@ function Visualizer({ treeData, children }) {
   }, [treeData]);
 
   return (
-    <div style={{ display: "flex" }}>
+    <div style={{ display: "flex", flexDirection: "column" }}>
       <div ref={ref} id="tree-visualizer" />
       <div>{children}</div>
     </div>

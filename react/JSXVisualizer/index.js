@@ -20,7 +20,7 @@ createRoot(document.getElementById("app")).render(
 
     <h2>ビジュアライザーでラップしたコンポーネント</h2>
     <Visualizer>
-      <div>
+      <div hidden>
         <p>hello</p>
         <p>hello</p>
         <p>
@@ -42,9 +42,26 @@ createRoot(document.getElementById("app")).render(
             <p>hello</p>
           </div>
           <div>
-            <p>hello</p>
-            <p>hello</p>
-            <p>hello</p>
+            <div>
+              <h1>hello</h1>
+              <h1>hello</h1>
+              <h1>hello</h1>
+            </div>
+            <div>
+              <h1>
+                <div />
+                <div />
+                <div />
+                <div />
+                <div />
+                <div />
+              </h1>
+              <h1>hello</h1>
+              <h1>hello</h1>
+              <h1>hello</h1>
+              <h1>hello</h1>
+              <h1>hello</h1>
+            </div>
           </div>
         </div>
       </div>
