@@ -1,70 +1,46 @@
 import React from "react";
 const { createRoot } = require("react-dom/client");
-const { render } = require("./visualizer");
-const { getTree } = require("../tree");
 const { Visualizer } = require("./visualizer");
 
-const MyComponent = () => {
+const MyComponent3 = () => {
   return (
     <div>
+      <p>hello</p>
+      <p>hello</p>
       <p>hello</p>
     </div>
   );
 };
 
-createRoot(document.getElementById("app")).render(
-  <div>
-    <h2>コンポーネント</h2>
-    <MyComponent />
-    {render(getTree())}
+const MyComponent2 = () => {
+  return (
+    <div>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <MyComponent3 />
+    </div>
+  );
+};
 
-    <h2>ビジュアライザーでラップしたコンポーネント</h2>
+const MyComponent = () => {
+  return (
+    <div hidden>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <MyComponent2 />
+      <MyComponent2 />
+      <MyComponent2 />
+    </div>
+  );
+};
+
+createRoot(document.getElementById("app")).render(
+  <React.Fragment>
     <Visualizer>
-      <div hidden>
-        <p>hello</p>
-        <p>hello</p>
-        <p>
-          hello
-          <img></img>
-          <span>span</span>
-          <span>span</span>
-          <span>
-            <label></label>
-            <label></label>
-            <label></label>
-            span
-          </span>
-        </p>
-        <div>
-          <div>
-            <p>hello</p>
-            <p>hello</p>
-            <p>hello</p>
-          </div>
-          <div>
-            <div>
-              <h1>hello</h1>
-              <h1>hello</h1>
-              <h1>hello</h1>
-            </div>
-            <div>
-              <h1>
-                <div />
-                <div />
-                <div />
-                <div />
-                <div />
-                <div />
-              </h1>
-              <h1>hello</h1>
-              <h1>hello</h1>
-              <h1>hello</h1>
-              <h1>hello</h1>
-              <h1>hello</h1>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* 現状単体のコンポーネントのみ対応 */}
+      <MyComponent />
     </Visualizer>
-  </div>
+  </React.Fragment>
 );
