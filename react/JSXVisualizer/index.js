@@ -1,6 +1,6 @@
 import React from "react";
-const { createRoot } = require("react-dom/client");
-const { Visualizer } = require("./visualizer");
+import { createRoot } from "react-dom/client";
+import { Visualizer } from "./visualizer";
 
 const MyComponent3 = () => {
   return (

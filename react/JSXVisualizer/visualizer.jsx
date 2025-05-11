@@ -1,5 +1,4 @@
-const React = require("react");
-const { useEffect, useRef } = require("react");
+import React, { useEffect, useRef } from "react";
 
 function Visualizer({ treeData, children }) {
   const ref = useRef();
